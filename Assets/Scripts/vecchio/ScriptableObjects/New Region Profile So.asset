@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae3fb3c2dead24a4680f169e43c9c9f7, type: 3}
+  m_Name: New Region Profile So
+  m_EditorClassIdentifier: 
+  terrainCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0008725997
+      value: 0.0025445288
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.19885999
+      value: 0.028062565
+      inSlope: 0.26405743
+      outSlope: 0.26405743
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.29530007
+      value: 0.08075113
+      inSlope: 0.352513
+      outSlope: 0.352513
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.405376
+      value: 0.10086214
+      inSlope: 0.26068383
+      outSlope: 0.26068383
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6038886
+      value: 0.23293942
+      inSlope: 1.4732884
+      outSlope: 1.4732884
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.76396775
+      value: 0.8463594
+      inSlope: 2.241099
+      outSlope: 2.241099
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8528352
+      value: 0.9858379
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  regions:
+  - name: mare profondo
+    height: 0.1
+    color: {r: 0, g: 0.08020946, b: 0.6132076, a: 1}
+  - name: mare
+    height: 0.2
+    color: {r: 0, g: 0.7303271, b: 1, a: 1}
+  - name: spiaggia
+    height: 0.3
+    color: {r: 1, g: 0.96657693, b: 0, a: 1}
+  - name: pareria
+    height: 0.4
+    color: {r: 0.47287858, g: 1, b: 0, a: 1}
+  - name: collina
+    height: 0.6
+    color: {r: 0.22946419, g: 0.4528302, b: 0.027767902, a: 1}
+  - name: montagna
+    height: 0.8
+    color: {r: 0.4509804, g: 0.18490653, b: 0.027450984, a: 1}
+  - name: picco
+    height: 1
+    color: {r: 1, g: 1, b: 1, a: 1}
