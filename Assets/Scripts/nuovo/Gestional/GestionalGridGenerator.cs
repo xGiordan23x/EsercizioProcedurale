@@ -11,7 +11,7 @@ public class GestionalGridGenerator : MonoBehaviour
 
     [Header("Single Tile Variables")]
     public int innerTileCount;
-    public Material innerDefaultMaterial;  
+    public Material innerDefaultMaterial;
     [Header("Street")]
     public GameObject roadPrefab;
     public GameObject trafficLightPrefab;
@@ -33,6 +33,11 @@ public class GestionalGridGenerator : MonoBehaviour
 
     private void Start()
     {
+        InitializeGrid();
+    }
+
+    public void InitializeGrid()
+    {
         var initialTileList = GenerateGrid(gameObject, gridWidth, gridHeight, tileCount, innerDefaultMaterial);
 
         worldSectionTileMap = new Dictionary<GestionalTile, List<GestionalTile>>();
@@ -46,7 +51,7 @@ public class GestionalGridGenerator : MonoBehaviour
         }
     }
 
-    public  List<GestionalTile> GenerateGrid(GameObject parent, int gridWidth, int gridHeight, int tileSquareCount, Material tileMaterial)
+    public List<GestionalTile> GenerateGrid(GameObject parent, int gridWidth, int gridHeight, int tileSquareCount, Material tileMaterial)
     {
         List<GestionalTile> resultList = new List<GestionalTile>();
         float tileSizeX = (float)gridWidth / tileSquareCount;
@@ -112,7 +117,31 @@ public class GestionalGridGenerator : MonoBehaviour
 
     }
 
+
+    public void DestroyTileMap()
+    {
+        foreach (GestionalTile bigTile in worldSectionTileMap.Keys)
+        {
+            Destroy(bigTile.gameObject);
+        }
+
+    }
+
+    public List<GestionalTile> GetSmallTileListFromBigTileName(string name)
+    {
+        foreach (KeyValuePair<GestionalTile, List<GestionalTile>> entry in worldSectionTileMap)
+        {         
+            if (entry.Key.gameObject.name == name)
+            {
+                return entry.Value;
+            }
+        }
+        return null; // No match found
+    }
+
+
 }
+
 
 
 

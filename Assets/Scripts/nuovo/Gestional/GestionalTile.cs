@@ -78,17 +78,26 @@ public class GestionalTile : MonoBehaviour
             roadObjectBehavior.SetType(type);
             roadObjectBehavior.SelectCorrectMesh();
         }
+        if (grassObjectBehavior != null)
+        {
+            grassObjectBehavior.SetNature();
+        }
 
-       
+
+
 
         if (type == TileType.empty)
         {
             Destroy(roadObject);
             roadObjectBehavior = null;
 
-            grassObjectBehavior.DestroyNature();
+
             Destroy(grassObject);
-            grassObjectBehavior = null;
+            if (grassObjectBehavior != null)
+            {
+                grassObjectBehavior.DestroyNature();
+                grassObjectBehavior = null;
+            }
         }
 
 
@@ -121,6 +130,20 @@ public class GestionalTile : MonoBehaviour
 
     }
 
+    public void CLearTile()
+    {
+        ChangeMesh(TileType.empty);
+        northOccupied = false;
+        southOccupied = false;
+        westOccupied = false;
+        eastOccupied = false;
+        northWestOccupied = false;
+        northEastOccupied = false;
+        southWestOccupied = false;
+        southEastOccupied = false;
+
+
+    }
 
 
 
