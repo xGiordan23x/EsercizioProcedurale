@@ -21,11 +21,18 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        CenterCameraToGrid(gridGenerator);
+        selectedType = TileType.road;
+    }
+
+    private void CenterCameraToGrid(GestionalGridGenerator gridGenerator)
+    {
+        
         mainCamera.transform.position = new Vector3(gridGenerator.gridWidth / 2, gridGenerator.gridHeight > gridGenerator.gridWidth ? gridGenerator.gridHeight : gridGenerator.gridWidth, gridGenerator.gridHeight / 2);
+        mainCamera.transform.rotation = Quaternion.Euler(new Vector3(90, 0, 0));
         GameObject gridCenter = new GameObject("GridCenter");
         cameraTarget = gridCenter;
         gridCenter.transform.position = new Vector3(gridGenerator.gridWidth / 2, gridGenerator.gameObject.transform.position.y, gridGenerator.gridHeight / 2);
-        selectedType = TileType.road;
     }
 
     private void Update()
@@ -171,6 +178,7 @@ public class GameManager : MonoBehaviour
                 gridGenerator.tileCount = int.Parse(words[2]);
                 gridGenerator.innerTileCount = int.Parse(words[3]);
                 gridGenerator.InitializeGrid();
+                CenterCameraToGrid(gridGenerator);
 
                 words.Clear();
                 word = null;
@@ -208,7 +216,7 @@ public class GameManager : MonoBehaviour
                     {
                         foreach (GestionalTile tile in result)
                         {
-                            if(tile.gameObject.name == words[1])
+                            if (tile.gameObject.name == words[1])
                             {
                                 tile.isOccupiedGrass = bool.Parse(words[2]);
                                 tile.isOccupiedRoad = bool.Parse(words[3]);
@@ -223,9 +231,9 @@ public class GameManager : MonoBehaviour
                                     tile.ChangeMesh(TileType.grass);
                                     tile.CheckNearTiles();
                                 }
-                                  
 
-                                
+
+
                             }
                         }
                     }
@@ -233,6 +241,8 @@ public class GameManager : MonoBehaviour
                     words.Clear();
                 }
 
+
+             
 
 
 

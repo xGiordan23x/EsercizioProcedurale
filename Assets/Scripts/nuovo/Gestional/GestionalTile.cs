@@ -159,8 +159,9 @@ public class GestionalTile : MonoBehaviour
                 if (hittedTile.roadObjectBehavior != null)
                 {
                     hittedTile.westOccupied = isOccupied;
-                    hittedTile.roadObjectBehavior.ChooseTileToTransform();
                     eastTile = hittedTile;
+                    hittedTile.roadObjectBehavior.ChooseTileToTransform();
+                    
                 }
                 return hittedTile.isOccupiedRoad;
 
@@ -179,8 +180,9 @@ public class GestionalTile : MonoBehaviour
                 {
 
                     hittedTile.eastOccupied = isOccupied;
-                    hittedTile.roadObjectBehavior.ChooseTileToTransform();
                     westTile = hittedTile;
+                    hittedTile.roadObjectBehavior.ChooseTileToTransform();
+                  
                 }
 
                 return hittedTile.isOccupiedRoad;
@@ -199,8 +201,9 @@ public class GestionalTile : MonoBehaviour
                 {
 
                     hittedTile.southOccupied = isOccupied;
-                    hittedTile.roadObjectBehavior.ChooseTileToTransform();
                     northTile = hittedTile;
+                    hittedTile.roadObjectBehavior.ChooseTileToTransform();
+                   
                 }
 
 
@@ -219,8 +222,9 @@ public class GestionalTile : MonoBehaviour
                 if (hittedTile.roadObjectBehavior != null)
                 {
                     hittedTile.northOccupied = isOccupied;
-                    hittedTile.roadObjectBehavior.ChooseTileToTransform();
                     southTile = hittedTile;
+                    hittedTile.roadObjectBehavior.ChooseTileToTransform();
+                    
                 }
 
                 return hittedTile.isOccupiedRoad;
@@ -239,8 +243,9 @@ public class GestionalTile : MonoBehaviour
                 if (hittedTile.roadObjectBehavior != null)
                 {
                     hittedTile.southWestOccupied = isOccupied;
-                    hittedTile.roadObjectBehavior.ChooseTileToTransform();
                     northEastTile = hittedTile;
+                    hittedTile.roadObjectBehavior.ChooseTileToTransform();
+                   
                 }
                 return hittedTile.isOccupiedRoad;
 
@@ -258,8 +263,9 @@ public class GestionalTile : MonoBehaviour
                 if (hittedTile.roadObjectBehavior != null)
                 {
                     hittedTile.southEastOccupied = isOccupied;
-                    hittedTile.roadObjectBehavior.ChooseTileToTransform();
                     northWestTile = hittedTile;
+                    hittedTile.roadObjectBehavior.ChooseTileToTransform();
+                    
                 }
 
                 return hittedTile.isOccupiedRoad;
@@ -277,8 +283,9 @@ public class GestionalTile : MonoBehaviour
                 if (hittedTile.roadObjectBehavior != null)
                 {
                     hittedTile.northWestOccupied = isOccupied;
-                    hittedTile.roadObjectBehavior.ChooseTileToTransform();
                     southEastTile = hittedTile;
+                    hittedTile.roadObjectBehavior.ChooseTileToTransform();
+                   
                 }
 
                 return hittedTile.isOccupiedRoad;
@@ -296,8 +303,9 @@ public class GestionalTile : MonoBehaviour
                 if (hittedTile.roadObjectBehavior != null)
                 {
                     hittedTile.northEastOccupied = isOccupied;
-                    hittedTile.roadObjectBehavior.ChooseTileToTransform();
                     southWestTile = hittedTile;
+                    hittedTile.roadObjectBehavior.ChooseTileToTransform();
+                   
                 }
 
                 return hittedTile.isOccupiedRoad;
